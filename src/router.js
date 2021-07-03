@@ -8,7 +8,7 @@ const Products = require('./models/product');
 
 router.get('/categories', async(req, res) => {
     const allCategories = await Categories.find({});
-    res,status(200).json(allCategories);
+    res.status(200).json(allCategories);
 });
 
 router.post('/categories', async(req, res) => {
@@ -19,7 +19,7 @@ router.post('/categories', async(req, res) => {
 
 router.get('/products', async(req, res) => {
     const allProducts = await Products.find({});
-    res,status(200).json(allProducts);
+    res.status(200).json(allProducts);
 });
 
 router.post('/products', async(req, res) => {

@@ -13,7 +13,7 @@ app.use(express.json());
 // Process FORM intput and put the data on req.body
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/', userRoute);
+app.use('', userRoute);
 app.get('/', (req, res) => {
     res.send('Proof of Life!');
 })
