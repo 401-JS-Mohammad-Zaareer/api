@@ -34,6 +34,11 @@ router.get('/products', async(req, res) => {
     const allProducts = await Products.find({});
     res.status(200).json(allProducts);
 });
+router.get('/products/:id', async(req, res) => {
+    const id = req.params.id;
+    const result = await Products.findById(id);
+    res.status(200).json(result);
+});
 
 router.post('/products', async(req, res) => {
     const product = new Products(req.body);
