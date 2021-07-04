@@ -2,10 +2,13 @@
 
 // 3rd Party Resources
 const express = require('express');
+const cors = require('cors');
 const userRoute = require('./router.js')
 
 // Prepare the express app
 const app = express();
+
+app.use(cors());
 
 // Process JSON input and put the data on req.body
 app.use(express.json());
